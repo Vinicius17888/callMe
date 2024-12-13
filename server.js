@@ -3,7 +3,7 @@ const path = require('path');
 const { PeerServer } = require('peer'); // Corrigido para importar corretamente o PeerServer
 
 const app = express();
-const port = process.env.PORT || 3000;  // Usa a variável de ambiente PORT para o Express
+const port = process.env.PORT || 8080;  // Usando a variável de ambiente PORT do Railway
 
 // Servir arquivos estáticos (como index.html)
 app.use(express.static(path.join(__dirname, 'public')));
@@ -16,7 +16,7 @@ const peerServer = PeerServer({
   proxied: true  // Isso é importante se você estiver atrás de um proxy reverso (como no Railway)
 });
 
-// Iniciar o servidor Express
+// Iniciar o servidor Express na porta correta
 app.listen(port, () => {
   console.log(`Servidor rodando em http://localhost:${port}`);
 });
