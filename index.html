@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CallMe - Videochamada</title>
+  <script src="https://cdn.jsdelivr.net/npm/peerjs@1.3.2/dist/peerjs.min.js"></script>
+</head>
+<body>
+  <h1>Videochamada CallMe</h1>
+
+  <video id="my-video" autoplay muted></video>
+  <video id="remote-video" autoplay></video>
+
+  <div>
+    <input type="text" id="peerId" placeholder="Digite o ID do outro usuário" />
+    <button id="connectBtn">Conectar</button>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
